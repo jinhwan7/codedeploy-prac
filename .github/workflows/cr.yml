@@ -13,8 +13,8 @@ jobs:
     name: Deploy to EC2
     runs-on: ubuntu-latest
 
-    env:
-      working-directory: ./apps/server
+    # env:
+    #   working-directory: ./apps/server
 
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-          cache-dependency-path: './pnpm-lock.yaml'
+          #cache-dependency-path: './pnpm-lock.yaml'
 
       #       - name: create env file
       #         working-directory: ${{ env.working-directory }}
